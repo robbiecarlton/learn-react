@@ -8,11 +8,7 @@ const defaultColumns = [
     cards: [
       {
         id: 1,
-        text: 'Story 1'
-      },
-      {
-        id: 2,
-        text: 'Story 2'
+        text: 'A chore that no one wants to do'
       }
     ]
   },
@@ -21,13 +17,18 @@ const defaultColumns = [
     color: '#F4C647',
     cards: [
       {
-        id: 3,
-        text: 'Story 3'
+        id: 4,
+        text: 'An interesting task.'
       },
       {
-        id: 4,
-        text: 'Story 4'
+        id: 7,
+        text: 'Hugely useful feature'
+      },
+      {
+        id: 2,
+        text: 'An urgent bug!'
       }
+
     ]
   },
   {
@@ -36,11 +37,11 @@ const defaultColumns = [
     cards: [
       {
         id: 5,
-        text: 'Story 5'
+        text: 'An important feature'
       },
       {
         id: 6,
-        text: 'Story 6'
+        text: 'A 1000 line PR'
       }
     ]
   },
@@ -49,12 +50,8 @@ const defaultColumns = [
     color: '#6CE895',
     cards: [
       {
-        id: 7,
-        text: 'Story 7'
-      },
-      {
         id: 8,
-        text: 'Story 8'
+        text: 'A second hugely useful feature '
       }
     ]
   }
@@ -105,7 +102,7 @@ function App () {
 
   return (
     <div className='App'>
-      {columns.map((column, i) => <Column
+      {columns.map(column => <Column
         column={column}
         key={column.id}
         addCard={addCardToColumn(column.id)}
